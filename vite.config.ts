@@ -14,7 +14,7 @@ const getPackageNameCamelCase = () => {
   }
 };
 
-const fileName = {
+const fileName:Record<string, string> = {
   es: `${getPackageName()}.mjs`,
   cjs: `${getPackageName()}.cjs`,
   iife: `${getPackageName()}.iife.js`,
