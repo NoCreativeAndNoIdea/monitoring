@@ -3,16 +3,10 @@
   "version": "0.0.1",
   "main": "./dist/monitoring.cjs",
   "module": "./dist/monitoring.mjs",
-  "exports": {
-    ".": {
-      "require": "./dist/monitoring.cjs",
-      "import": "./dist/monitoring.mjs"
-    }
-  },
   "scripts": {
-    "dev": "vite --host",
-    "build": "tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
+    "build": "node -r esbuild-register ./scripts/build.ts",
     "test": "jest --runInBand",
+    "play": "pnpm -C playground dev",
     "test:coverage": "jest --runInBand --coverage",
     "lint:scripts": "eslint . --ext .ts",
     "format:scripts": "prettier . --write",
@@ -20,12 +14,15 @@
     "prepare": "husky install && husky add .husky/pre-commit 'npx lint-staged' && git add .husky/pre-commit"
   },
   "devDependencies": {
+    "@monitor/metadata": "workspace:^0.0.1",
     "@types/jest": "^29.0.0",
     "@types/jsdom": "^20.0.0",
     "@types/node": "^18.7.16",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "dts-bundle-generator": "^6.13.0",
+    "esbuild": "^0.15.9",
+    "esbuild-register": "^3.3.3",
     "eslint": "8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
