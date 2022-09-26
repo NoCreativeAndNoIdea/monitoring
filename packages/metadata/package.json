@@ -1,0 +1,11 @@
+{
+  "name": "@monitor/metadata",
+  "version": "0.0.1",
+  "private": "false",
+  "description": "monitor build metadata",
+  "main": "index.ts",
+  "scripts": {},
+  "keywords": [],
+  "author": "season",
+  "license": "ISC"
+}

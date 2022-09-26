@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
+    "rootDir": "./packages",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -17,6 +17,6 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["vite/client", "node", "jest"]
   },
-  "include": ["src"],
+  "include": ["packages/**/*"],
   "exclude": ["**/*.test.ts", "node_modules", "test/**", ".history/**"]
 }

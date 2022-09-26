@@ -1,0 +1,12 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "a web monitor playground",
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "vite --host"
+  },
+  "author": "season",
+  "license": "ISC"
+}
